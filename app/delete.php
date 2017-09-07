@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-require_once('class/SPDO.php');
-require_once('class/News.php');
+require_once('../class/SPDO.php');
+require_once('../class/News.php');
 
 $redirect = "/newsTool";
 

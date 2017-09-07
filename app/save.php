@@ -3,8 +3,8 @@ session_start();
 
 require_once('login.php');
 
-require_once('class/SPDO.php');
-require_once('class/News.php');
+require_once('../class/SPDO.php');
+require_once('../class/News.php');
 
 if(isset($_POST['news_id'])) {
 
@@ -21,7 +21,7 @@ if(isset($_POST['news_id'])) {
     $news->setStatus($s);
     $news->saveNewsInfos(); 
     
-    $redirect = "/newsTool/edit.php?id=".$_POST['news_id'];    
+    $redirect = "/newsTool/app/edit.php?id=".$_POST['news_id'];    
     
 } else {
     $news = new News();

@@ -3,8 +3,8 @@ session_start();
 
 require_once('login.php');
 
-require_once('class/SPDO.php');
-require_once('class/News.php');
+require_once('../class/SPDO.php');
+require_once('../class/News.php');
 
 $success = "";
 if(isset($_SESSION['message'])) {
@@ -34,16 +34,16 @@ if(isset( $_GET['id'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>News tool</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/ckeditor/ckeditor.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/ckeditor/ckeditor.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Outil de gestion des news</h1>
-        <?php include_once('components/nav.php'); ?>
+        <?php include_once('../components/nav.php'); ?>
         <h3><?php echo $title; ?></h3>
         <hr></hr>
         <?php echo $success; ?>

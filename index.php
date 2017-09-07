@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once('login.php');
+require_once('app/login.php');
 
 require_once('class/SPDO.php');
 require_once('class/News.php');
@@ -43,8 +43,8 @@ if(isset($_SESSION['message'])) {
             foreach($news_list as $n) { ?>
                 <tr>
                     <td width="75%"><?php echo $n['news_title']; ?></td>
-                    <td><a href="/newsTool/edit.php?id=<?php echo $n['news_id']; ?>">Edit</a>
-                    <td><a href="/newsTool/delete.php?id=<?php echo $n['news_id']; ?>">Del</a></td>
+                    <td><a href="/newsTool/app/edit.php?id=<?php echo $n['news_id']; ?>">Edit</a>
+                    <td><a href="/newsTool/app/delete.php?id=<?php echo $n['news_id']; ?>">Del</a></td>
                     <td><?php echo $n['news_status'] ? 'Online' : 'Offline'; ?></td>
                     </tr>
             <?php } ?>        
